@@ -163,13 +163,15 @@ header {
   right: 0;
   bottom: 3%;
   z-index: 10;
-  height: 310px;
   background-color: rgb(255, 255, 255);
   padding: 4rem;
   width: 400px;
   text-align: center;
   border: 0.5px solid #bdbec4;
   transition: all 0.4s ease-in-out 0s;
+}
+.enquire-form h3{
+  margin-top: 0;
 }
 .enquire-btn {
   height: 310px;
@@ -365,6 +367,9 @@ footer {
   background-color: #000;
   text-align: center;
   color: white;
+}
+footer p{
+  margin-bottom: 0;
 }
 .mobile-nav,
 .menu-icon {
