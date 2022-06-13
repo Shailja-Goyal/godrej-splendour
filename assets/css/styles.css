@@ -449,6 +449,9 @@ footer {
     align-items: center;
     row-gap: 32px;
   }
+  .plan {
+    width: 100%;
+  }
   .table1-wrapper {
     display: block;
     overflow-x: auto;
@@ -461,6 +464,39 @@ footer {
   }
   .highlight {
     width: 48%;
+  }
+  .enquire-form {
+    height: 100%;
+    bottom: 0;
+    z-index: 22;
+    width: 100%;
+    padding: 8rem 3rem;
+    left: 100%;
+  }
+  .enquire-form.show {
+    left: 0;
+  }
+  .enquire-btn {
+    width: 50%;
+    height: auto;
+    writing-mode: initial;
+    transform: none;
+    bottom: 0;
+    display: flex !important;
+    right: 0 !important;
+    line-height: 150%;
+    padding: 8px 24px;
+    text-align: center;
+    transition: none;
+    border-left: 1px solid white;
+    z-index: 2;
+  }
+  .hide {
+    left: 100% !important;
+    right: unset;
+  }
+  footer{
+    margin-bottom: 40px;
   }
 }
 
@@ -506,35 +542,6 @@ footer {
     width: 95%;
     padding: 0;
   }
-  .enquire-form {
-    height: 100%;
-    bottom: 0;
-    z-index: 22;
-    width: 100%;
-    padding: 8rem 3rem;
-    left: 100%;
-  }
-  .enquire-form.show {
-    left: 0;
-  }
-  .enquire-btn {
-    width: 50%;
-    height: auto;
-    writing-mode: initial;
-    transform: none;
-    bottom: 0;
-    display: block !important;
-    right: 0 !important;
-    line-height: 150%;
-    padding: 8px 24px;
-    text-align: center;
-    transition: none;
-    border-left: 1px solid white;
-  }
-  .hide {
-    left: 100% !important;
-    right: unset;
-  }
 }
 
 @media (max-width: 500px) {
@@ -550,5 +557,13 @@ footer {
   .gallery div:nth-child(10),
   .gallery div:nth-child(12) {
     display: none;
+  }
+  .chat a, .enquire-btn{
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  footer{
+    margin-bottom: 64px;
   }
 }
