@@ -86,12 +86,14 @@
 
     <section class="enquire-section">
       <div class="enquire-btn" onclick="showForm()">REQUEST CALLBACK</div>
-      <form class="enquire-form">
+      <form method="POST" id="enquiry-form" class="enquire-form">
         <h3>GET A CALLBACK</h3>
-        <input type="text" placeholder="Name" />
-        <input type="number" placeholder="Phone Number" />
+        <input  id="name" name='name'  type="text" placeholder="Name" />
+        <p class="name-error">*Enter a valid name</p>
+        <input  id="number" name='number'  type="number" placeholder="Phone Number" />
+        <p class="number-error">*Enter a valid number</p>
         <input class="submit-btn" type="submit" value="Submit" />
-
+        <p class="success-msg">Submitted Successfully!!</p>
         <div class="close-btn" onclick="hideForm()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
