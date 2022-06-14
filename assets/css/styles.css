@@ -173,6 +173,22 @@ header {
 .enquire-form h3{
   margin-top: 0;
 }
+.enquire-form p{
+  text-align: left;
+  font-size: 12px;
+  color: red;
+  margin: 0;
+  display: none;
+}
+.d-flex{
+  display: flex !important;
+}
+.enquire-form .success-msg{
+  color: #00b899;
+  margin: 10px 0 0;
+ justify-content: center;
+ display: none;
+}
 .enquire-btn {
   height: 310px;
   width: 50px;
@@ -199,7 +215,7 @@ header {
   font-weight: 400;
   height: 44px;
   line-height: 160%;
-  margin-bottom: 24px;
+  margin-top: 24px;
   padding: 0 16px;
   width: 100%;
 }
