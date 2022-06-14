@@ -37,6 +37,7 @@ function scrollAnchors(e, respond = null) {
 function hideForm() {
   $(".enquire-form").addClass("hide");
   $(".enquire-btn").addClass("show-btn");
+  $('.success-msg').removeClass('d-flex')
 }
 
 function showForm() {
@@ -73,4 +74,37 @@ function showNav() {
 
 function hideNav() {
   $(".mobile-nav").removeClass("active");
+}
+
+$('#enquiry-form').submit(function(e){
+  e.preventDefault();
+  $('.success-msg').removeClass('d-flex')
+  let valid = true
+  let name = document.getElementById('name').value;
+  let number = document.getElementById('number').value;
+  let NAME_REGEX = /^[a-zA-Z]{3}[a-zA-Z ]{0,37}$/;
+  let NUMBER_REGEX = /^[6789]\d{9}/;
+  if(!NAME_REGEX.test(name)){
+    $('.name-error').addClass('d-flex');
+    valid = false
+  } 
+  else $('.name-error').removeClass('d-flex');
+  if(!NUMBER_REGEX.test(number)){
+    $('.number-error').addClass('d-flex');
+    valid = false
+  } 
+  else $('.number-error').removeClass('d-flex');
+  if(valid){
+    $('.success-msg').addClass('d-flex')
+    handleSubmit(name,number)
+  } 
+})
+
+function handleSubmit(name,number){
+  $('#enquiry-form')[0].reset();
+  var form = $('#myform')[0];
+  var data = new FormData(form);
+  let ajax_request = new XMLHttpRequest();
+  ajax_request.open('POST', 'query.php');
+  ajax_request.send(data)
 }
